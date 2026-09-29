@@ -1,0 +1,24 @@
+name = "fhin-farm-agent"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+MIN_CONFIDENCE = "70"
+CHAIN_ID = "5611"
+BNB_TESTNET_RPC_URL = "https://opbnb-testnet-rpc.bnbchain.org"
+CONTRACT_ADDRESS = "0xE07e56Af882368bc604F047Ed092A0C139c72809"
+GLM_BASE_URL = "https://api.thirtystore.com/v1"
+GLM_MODELS = "thirty/glm-5.1,thirty/qwen3.8-max,thirty/deepseek-v4-flash,thirty/deepseek-v4-pro,thirty/deepseek-v4.1-flash,thirty/gpt-5.5,thirty/kimi-k3,thirty/minimax-m2.7,thirty/minimax-m3,thirty/glm-5v-turbo"
+GLM_TEMPERATURE = "0.1"
+GLM_MAX_RETRIES = "3"
+GLM_BACKOFF_MS = "1500"
+GLM_TIMEOUT_MS = "60000"
+
+# Secret (set with `wrangler secret put <NAME>`, never commit):
+#   GLM_API_KEY
+#   ORACLE_PRIVATE_KEY
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "fhin-farm-photos"
