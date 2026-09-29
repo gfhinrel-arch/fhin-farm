@@ -1,0 +1,14 @@
+{
+  "name": "fhin-farm-agent-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FHIN FARM AI agent, running as a Cloudflare Worker (agent /api/grade, /api/verify-delivery, /api/upload).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "viem": "^2.56.8"
+  }
+}
